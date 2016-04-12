@@ -60,14 +60,14 @@
      * on the same Wi-Fi network.
      */
 
-    sourceURL = [NSURL URLWithString:@"http://localhost:8081/Examples/UIExplorer/UIExplorerApp.ios.bundle?platform=ios&dev=true"];
+    sourceURL = [NSURL URLWithString:@"http://localhost:9081/Examples/UIExplorer/UIExplorerApp.ios.bundle?platform=ios&dev=true"];
 
     /**
      * OPTION 2
      * Load from pre-bundled file on disk. To re-generate the static bundle, `cd`
      * to your Xcode project folder and run
      *
-     * $ curl 'http://localhost:8081/Examples/UIExplorer/UIExplorerApp.ios.bundle?platform=ios' -o main.jsbundle
+     * $ curl 'http://localhost:9081/Examples/UIExplorer/UIExplorerApp.ios.bundle?platform=ios' -o main.jsbundle
      *
      * then add the `main.jsbundle` file to your project and uncomment this line:
      */

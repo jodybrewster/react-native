@@ -28,7 +28,7 @@ function server(argv, config) {
 function _server(argv, config, resolve, reject) {
   const args = parseCommandLine([{
     command: 'port',
-    default: 8081,
+    default: 9081,
     type: 'string',
   }, {
     command: 'host',

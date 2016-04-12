@@ -59,7 +59,7 @@ describe('resolveAssetSource', () => {
   describe('bundle was loaded from network (DEV)', () => {
     beforeEach(() => {
       NativeModules.SourceCode.scriptURL =
-        'http://10.0.0.1:8081/main.bundle';
+        'http://10.0.0.1:9081/main.bundle';
       Platform.OS = 'ios';
     });
 
@@ -78,7 +78,7 @@ describe('resolveAssetSource', () => {
         __packager_asset: true,
         width: 100,
         height: 200,
-        uri: 'http://10.0.0.1:8081/assets/module/a/logo.png?platform=ios&hash=5b6f00f',
+        uri: 'http://10.0.0.1:9081/assets/module/a/logo.png?platform=ios&hash=5b6f00f',
         scale: 1,
       });
     });
@@ -98,7 +98,7 @@ describe('resolveAssetSource', () => {
         __packager_asset: true,
         width: 100,
         height: 200,
-        uri: 'http://10.0.0.1:8081/assets/module/a/logo@2x.png?platform=ios&hash=5b6f00f',
+        uri: 'http://10.0.0.1:9081/assets/module/a/logo@2x.png?platform=ios&hash=5b6f00f',
         scale: 2,
       });
     });

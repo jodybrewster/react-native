@@ -36,7 +36,7 @@ You can also iterate quickly on device using the development server. Follow one 
 
 Have your device connected via USB with debugging enabled (see paragraph above on how to enable USB debugging on your device).
 
-1. Run `adb reverse tcp:8081 tcp:8081`
+1. Run `adb reverse tcp:9081 tcp:9081`
 2. You can use `Reload JS` and other development options with no extra configuration
 
 ### Configure your app to connect to the local dev server via Wi-Fi
@@ -47,5 +47,5 @@ Have your device connected via USB with debugging enabled (see paragraph above o
 4. Open the **Developer menu** by shaking the device or running `adb shell input keyevent 82` from the command line.
 5. Go to `Dev Settings`.
 6. Go to `Debug server host for device`.
-7. Type in your machine's IP address and the port of the local dev server (e.g. 10.0.1.1:8081). **On Mac**, you can find the IP address in System Preferences / Network. **On Windows**, open the command prompt and type `ipconfig` to find your machine's IP address ([more info](http://windows.microsoft.com/en-us/windows/using-command-line-tools-networking-information)).
+7. Type in your machine's IP address and the port of the local dev server (e.g. 10.0.1.1:9081). **On Mac**, you can find the IP address in System Preferences / Network. **On Windows**, open the command prompt and type `ipconfig` to find your machine's IP address ([more info](http://windows.microsoft.com/en-us/windows/using-command-line-tools-networking-information)).
 8. Go back to the **Developer menu** and select `Reload JS`.
