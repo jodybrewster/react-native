@@ -129,14 +129,14 @@ Ready for the most interesting part? Now we shall create the `RCTRootView`, wher
 In `ReactView.m`, we need to first initiate `RCTRootView` with the URI of your `index.ios.bundle`. `index.ios.bundle` will be created by packager and served by React Native server, which will be discussed later on.
 
 ```
-NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios"];
+NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:9081/index.ios.bundle?platform=ios"];
 // For production use, this `NSURL` could instead point to a pre-bundled file on disk:
 //
 //   NSURL *jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
 //
 // To generate that file, run the curl command and add the output to your main Xcode build target:
 //
-//   curl http://localhost:8081/index.ios.bundle -o main.jsbundle
+//   curl http://localhost:9081/index.ios.bundle -o main.jsbundle
 RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
                                                     moduleName: @"SimpleApp"
                                              initialProperties:nil
@@ -160,7 +160,7 @@ import React
 
 class ReactView: UIView {
 
-  let rootView: RCTRootView = RCTRootView(bundleURL: NSURL(string: "http://localhost:8081/index.ios.bundle?platform=ios"),
+  let rootView: RCTRootView = RCTRootView(bundleURL: NSURL(string: "http://localhost:9081/index.ios.bundle?platform=ios"),
     moduleName: "SimpleApp", initialProperties: nil, launchOptions: nil)
     
   override func layoutSubviews() {
@@ -186,7 +186,7 @@ In root directory, we need to start React Native development server.
 (JS_DIR=`pwd`/ReactComponent; cd node_modules/react-native; npm run start -- --root $JS_DIR)
 ```
 
-This command will start up a React Native development server within our CocoaPods dependency to build our bundled script. The `--root` option indicates the root of your React Native apps – this will be our `ReactComponent` directory containing the single `index.ios.js` file. This running server will package up the `index.ios.bundle` file accessible via `http://localhost:8081/index.ios.bundle`.
+This command will start up a React Native development server within our CocoaPods dependency to build our bundled script. The `--root` option indicates the root of your React Native apps – this will be our `ReactComponent` directory containing the single `index.ios.js` file. This running server will package up the `index.ios.bundle` file accessible via `http://localhost:9081/index.ios.bundle`.
 
 ## Update App Transport Security
 

@@ -35,7 +35,7 @@ to local port and forwards all communication back via the same peertalk channel.
     incoming     +----------------+   |                                  |                 +--------------+
     connections  |Proxy Server    |   |                                  |                 |Real Server   |
    ------------->>                |   |         +-------------+ commands |                 |              |
-                 |       Port 8081|   | create  |             |  stream  |                 |     Port 8081|
+                 |       Port 9081|   | create  |             |  stream  |                 |     Port 9081|
                  +-+--------------+   +---------> Peertalk    <----------+                 +-^------------+
                    |                            | Channel     |                              ^
                    |   +--------+               |             |               +--------+     | outgoing
@@ -55,12 +55,12 @@ to local port and forwards all communication back via the same peertalk channel.
                                                 +-------------+
 
 First, the library on iOS device creates a TCP server on the port we want to
-forward (let's say 8081) and a special Peertalk server on port 8025. Mac helper
+forward (let's say 9081) and a special Peertalk server on port 8025. Mac helper
 app looks for connected iOS devices, and once it finds one it connects to its
 peertalk server. Only *one* channel is created that's going to be used for
 multiplexing data.
 
 When a socket connects to local proxy server, FBPortForwarding is going to assign
 a tag to the connection and use peertalk channel to tell Mac helper app to connect
-to TCP port 8081 on Mac. Now events and data on both sides of the wire are going
+to TCP port 9081 on Mac. Now events and data on both sides of the wire are going
 to be multiplexed and transferred via the peertalk channel.
