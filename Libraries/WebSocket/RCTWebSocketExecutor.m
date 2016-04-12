@@ -50,7 +50,7 @@ RCT_EXPORT_MODULE()
 {
   if (!_url) {
     NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
-    NSInteger port = [standardDefaults integerForKey:@"websocket-executor-port"] ?: 8081;
+    NSInteger port = [standardDefaults integerForKey:@"websocket-executor-port"] ?: 9081;
     NSString *URLString = [NSString stringWithFormat:@"http://localhost:%zd/debugger-proxy", port];
     _url = [RCTConvert NSURL:URLString];
   }

@@ -18,10 +18,10 @@ If you are using a non-QWERTY/AZERTY keyboard layout you can use the `Hardware >
 ![red-screen](https://cloud.githubusercontent.com/assets/602176/6857442/63fd4f0a-d3cc-11e4-871f-875b0c784611.png)
 
 
-Something is probably already running on port 8081. You can either kill it or try to change which port the packager is listening to.
+Something is probably already running on port 9081. You can either kill it or try to change which port the packager is listening to.
 
-##### Kill process on port 8081
-`$ sudo lsof -n -i4TCP:8081 | grep LISTEN`
+##### Kill process on port 9081
+`$ sudo lsof -n -i4TCP:9081 | grep LISTEN`
 
 then
 
@@ -92,7 +92,7 @@ To revert the `User Search Header Paths` and `Header Search Paths` build setting
 Ensure that you are on the same WiFi network as your computer. If you're using a cell data plan, your phone can't access your computer's local IP address.
 
 ##### Android
-You need to run `adb reverse tcp:8081 tcp:8081` to forward requests from the device to your computer. This works only on Android 5.0 and newer.
+You need to run `adb reverse tcp:9081 tcp:9081` to forward requests from the device to your computer. This works only on Android 5.0 and newer.
 
 ## Module that uses `WebSocket` (such as Firebase) throws an exception
 
