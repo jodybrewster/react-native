@@ -39,7 +39,7 @@
   RCTAssert(scriptURL != nil, @"Could not locate main.jsBundle");
 #else
   NSString *app = @"Examples/UIExplorer/UIExplorerIntegrationTests/js/IntegrationTestsApp";
-  NSURL *scriptURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://localhost:8081/%@.bundle?platform=ios&dev=true", app]];
+  NSURL *scriptURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://localhost:9081/%@.bundle?platform=ios&dev=true", app]];
 #endif
 
   _bridge = [[RCTBridge alloc] initWithBundleURL:scriptURL moduleProvider:NULL launchOptions:nil];

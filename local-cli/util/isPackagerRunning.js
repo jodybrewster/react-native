@@ -20,7 +20,7 @@ const fetch = require('node-fetch');
  *                     packager to be running.
  */
 function isPackagerRunning() {
-  return fetch('http://localhost:8081/status').then(
+  return fetch('http://localhost:9081/status').then(
     res => res.text().then(body =>
       body === 'packager-status:running' ? 'running' : 'unrecognized'
     ),

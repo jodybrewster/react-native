@@ -93,7 +93,7 @@ To use it with react-native you just have to add a key and value to your registr
 5. Set the name to `Path`
 6. Double Click the new `Path` Key and set the value to `C:\Program Files\Android\sdk`. The path value might be different on your machine.
 
-You will also need to run the command `adb reverse tcp:8081 tcp:8081` with this emulator.
+You will also need to run the command `adb reverse tcp:9081 tcp:9081` with this emulator.
 
 Then restart the emulator and when it runs you can just do `react-native run-android` as usual.
 

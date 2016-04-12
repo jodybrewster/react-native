@@ -16,11 +16,11 @@ var path = require('path');
 function getChromeAppName() {
   switch (process.platform) {
   case 'darwin':
-    return 'google chrome';
+    return 'google chrome canary';
   case 'win32':
-    return 'chrome';
+    return 'chrome canary';
   default:
-    return 'google-chrome';
+    return 'google-chrome-canary';
   }
 }
 

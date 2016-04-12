@@ -10,7 +10,7 @@
 
 /**
  * Status page so that anyone who needs to can verify that the packager is
- * running on 8081 and not another program / service.
+ * running on 9081 and not another program / service.
  */
 module.exports = function(req, res, next) {
   if (req.url === '/status') {
