@@ -23,7 +23,7 @@ const HMRClient = {
 
     // TODO(martinb) receive host and port as parameters
     const host = 'localhost';
-    const port = '8081';
+    const port = '9081';
 
     // need to require WebSocket inside of `enable` function because the
     // this module is defined as a `polyfillGlobal`.

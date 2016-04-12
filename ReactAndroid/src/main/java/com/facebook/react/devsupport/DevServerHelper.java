@@ -50,9 +50,9 @@ public class DevServerHelper {
   public static final String RELOAD_APP_EXTRA_JS_PROXY = "jsproxy";
   private static final String RELOAD_APP_ACTION_SUFFIX = ".RELOAD_APP_ACTION";
 
-  private static final String EMULATOR_LOCALHOST = "10.0.2.2:8081";
-  private static final String GENYMOTION_LOCALHOST = "10.0.3.2:8081";
-  private static final String DEVICE_LOCALHOST = "localhost:8081";
+  private static final String EMULATOR_LOCALHOST = "10.0.2.2:9081";
+  private static final String GENYMOTION_LOCALHOST = "10.0.3.2:9081";
+  private static final String DEVICE_LOCALHOST = "localhost:9081";
 
   private static final String BUNDLE_URL_FORMAT =
       "http://%s/%s.bundle?platform=android&dev=%s";
@@ -147,7 +147,7 @@ public class DevServerHelper {
     }
     FLog.w(
         ReactConstants.TAG,
-        "You seem to be running on device. Run 'adb reverse tcp:8081 tcp:8081' " +
+        "You seem to be running on device. Run 'adb reverse tcp:9081 tcp:9081' " +
             "to forward the debug server's port to the device.");
     return DEVICE_LOCALHOST;
   }

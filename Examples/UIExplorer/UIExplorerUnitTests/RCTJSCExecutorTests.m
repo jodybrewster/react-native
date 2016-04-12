@@ -133,7 +133,7 @@ static uint64_t _get_time_nanoseconds(void)
     } \
   ";
 
-  [_executor executeApplicationScript:[script dataUsingEncoding:NSUTF8StringEncoding] sourceURL:[NSURL URLWithString:@"http://localhost:8081/"] onComplete:^(__unused NSError *error) {
+  [_executor executeApplicationScript:[script dataUsingEncoding:NSUTF8StringEncoding] sourceURL:[NSURL URLWithString:@"http://localhost:9081/"] onComplete:^(__unused NSError *error) {
     NSMutableArray *params = [NSMutableArray new];
     id data = @1;
     for (int i = 0; i < 4; i++) {
